@@ -47,18 +47,19 @@
         </footer>
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
-      <script src="libs/backendless.js" type="text/javascript"></script>
-      <script src="js/blog.js" type="text/javascript"></script>
+      <script type="text/javascript" src="libs/backendless.js" ></script>
+      <script type="text/javascript" src="js/blog.js" ></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script src="js/handlebars-v4.0.5.js" type="text/javascript"></script>
+      <script type="text/javascript" src="js/handlebars-v4.0.5.js" ></script>
       
-      <script id="blogs-template" type="text/x-handlebars-template">
+       <script id="blogs-template" type="text/x-handlebars-template">
       {{#each posts}}
         <div class="blog-post">
-              <h2 class="blog-post-title">{{titlt}}</h2>
+              <h2 class="blog-post-title">{{title}}</h2>
               <p class="blog-post-meta">At {{time}} by {{authorEmail}}</p>
               <div>{{content}}</div>
         {{/each}}       
-      </script>    
+      </script> 
+   
     </body>
   </html>
