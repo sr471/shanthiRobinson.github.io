@@ -29,3 +29,12 @@ function Posts(args){
     this.content = args.content || "";
     this.authorEmail = args.authorEmail || "";
 }
+
+function userLoggedIn(){
+    console.log("user logged in");
+}
+
+function gotError(error){
+    console.log("Error message - " + error.message);
+    console.log("Error code - " + error.code);
+}
