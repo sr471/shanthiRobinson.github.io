@@ -86,19 +86,20 @@
           <button class="btn  btn-large waves-effect waves-light add-blog">Add a new Blog</button>
           <button class="btn  btn-large waves-effect waves-light logout">Logout</button>
       </script>
+      <script id="add-blog-template" type="text/x-handlebars-template">
       <h2>Add new Blog</h2>
       <div class="row">
           <form class="col s12 form-add-blog">
               <div class="row">
                   <div class="input-field col s12">
                       <input id="title" type="text" name="title">
-                      <label for="title"></label>
+                      <label for="title">Title</label>
                   </div>
               </div>
               <div class="row">
                   <div class="input-field col s12">
                       <textarea id="content" name="content" class="materialize-textarea"></textarea>
-                      <label for="content"></label>
+                      <label for="content">Content</label>
                   </div>
               </div>
               <div class="row">
@@ -110,6 +111,6 @@
               </div>
           </form>
       </div>
-    
+    </script>
     </body>
   </html>
