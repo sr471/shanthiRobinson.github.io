@@ -8,12 +8,11 @@ $(function (){
      userLoggedIn(Backendless.LocalCache.get("current-user-id"));
     }
     else{
-    var loginScript = $("#login-template").html();
-    var loginTemplate = Handlebars.compile(loginScript);
+        var loginScript = $("#login-template").html();
+        var loginTemplate = Handlebars.compile(loginScript);
+        $('.main-container').html(loginTemplate);  
    }
-   
-   $('.main-container').html(loginTemplate);    
-   
+          
    $(document).on('submit', '.form-signin', function(event){
        event.preventDefault();
        
@@ -51,6 +50,14 @@ $(function (){
         this.content.value = "";
         
      });
+     
+     $(document).on('click', '.logout', function(){
+         Backendless.UserService.logout(new Backendless.Async(userLoggedOut, gotError));
+         
+          var loginScript = $("#login-template").html();
+        var loginTemplate = Handlebars.compile(loginScript);
+        $('.main-container').html(loginTemplate);  
+     });
 });
 
 function Posts(args){
@@ -74,6 +81,10 @@ function userLoggedIn(user){
     var welcomeHTML = welcomeTemplate(userData);
     
     $('.main-container').html(welcomeHTML);
+}
+
+function userLoggedOut(){
+    console.log("logged out");
 }
 
 function gotError(error){
