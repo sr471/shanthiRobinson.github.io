@@ -3,12 +3,14 @@ $(function (){
         SECRET_KEY ="FAAD96D2-4BE2-1DEB-FFBE-A1132489EF00",
         VERSION = "v1";
         
-    Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
-    
-      
-   var loginScript = $("#login-template").html();
-   var loginTemplate = Handlebars.compile(loginScript);
-  
+   Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
+   if(Backendless.UserService.isValidLogin()) {
+     userLoggedIn(Backendless.LocalCage.get("current-user-id"));
+    }
+    else{
+    var loginScript = $("#login-template").html();
+    var loginTemplate = Handlebars.compile(loginScript);
+   }
    
    $('.main-container').html(loginTemplate);    
    
