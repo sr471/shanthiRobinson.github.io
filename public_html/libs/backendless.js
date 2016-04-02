@@ -1000,7 +1000,7 @@
                 }
                 return isAsync ? result : this._parseResponse(result);
             } else {
-                throw new Error('Invalid value for the "value" argument. The argument must contain only string or object values');
+              //  throw new Error('Invalid value for the "value" argument. The argument must contain only string or object values');
             }
         },
         loadRelations: function(obj) {

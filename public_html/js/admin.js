@@ -90,5 +90,9 @@ function userLoggedOut(){
 function gotError(error){
     console.log("Error message - " + error.message);
     console.log("Error code - " + error.code);
+   Materialize.toast('Login Incorrect', 4000);
 }
 
+// Materialize.toast(message, displayLength, className, completeCallback);
+   // 4000 is the duration of the toast 
+  
