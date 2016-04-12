@@ -1,88 +1,125 @@
-<!DOCTYPE html>
-  <html>
-    <head>
-      <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-      <link href="css/blog.css" rel="stylesheet" type="text/css"/>
-      <link rel="icon" href="data:;base64,iVBORwOKGgo=">
-        <title>Blog</title>
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
+<html lang="en" class=" js "><head>
+		<meta charset="UTF-8">
+                <meta name="description" content="Blueprint: Slide and Push Menus">
+		<meta name="keywords" content="sliding menu, pushing menu, navigation, responsive, menu, css, jquery">
+		<meta name="author" content="Codrops">
+		<link rel="stylesheet" type="text/css" href="css/default.css">
+		<link rel="stylesheet" type="text/css" href="css/component.css">
+                <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+                <link href="css/blog.css" rel="stylesheet" type="text/css"/>
+                <link rel="icon" href="data:;base64,iVBORwOKGgo=">
+                <title>Blog</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script src="js/modernizr.custom.js"></script>
+		<script type="text/javascript">
 
-    <body class="grey lighten-4"> 
-        <header> 
-            <!--<div class="navbar-fixed">-->
-            <nav class="new"> 
-                <div class="nav-wrapper">
-                    <a href="#" class="brand-logo"><img class="responsive-img blog" src="blog_banner_v3.png"></a>
-                    <ul class="right">
-                        
-                    </ul>
-                   
-                </div>
-                
-                
-    <ul class="right ">
-      <li><a href="#!">Blogs<span class="new badge">1</span></a></li>
-      <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons">more_vert</i></a></li>
-      <ul id='dropdown1' class='dropdown-content'>
-        <li><a class="butt" href="index.html">Home</a></li>
-                       <li><a class="butt" href="admin.html">Admin</a></li>
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-7243260-2']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+        </head>
         
-      </ul>
-    </ul>
-                
-<ul id="slide-out" class="side-nav">
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
-  </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
-            </nav>
-            <!--</div>-->
+	<body class="cbp-spmenu-push grey lighten-4">
+            <header class="clearfix">
+               <div class="navbar-fixed"> 
+                <nav class="new">
+                 <div class="nav-wrapper purple">
+                    <a href="#" class="brand-logo"><img class="responsive-img blog" src="pictures/blog_banner_v3.png"></a>
+                     <ul class="right">                            
+                        <li class="butt"><button id="showLeft" class="active"><i class="mdi-navigation-menu"></i></button></li>
+                        <li><a href="#"><h5>Blogs</h5><span class="new badge">1</span></a></li>
+                        <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons">more_vert</i></a></li>
+                        <li><ul id='dropdown1' class='dropdown-content'></li>
+                          <li><a  href="index.html">Home</a></li>
+                          <li><a href="admin.html">Admin</a></li>
+                        </ul>
+                     </ul>                      
+                 </div> 
+                </nav>    
+               </div>         
+		
+                <nav class=" purple cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left cbp-spmenu-open" id="cbp-spmenu-s1">
+			<h3>Menu</h3>
+			<!--<a href="#">Celery seakale</a>-->
+			<!--<a href="#">Dulse daikon</a>-->
+			<!--<a href="#">Zucchini garlic</a>-->
+			<!--<a href="#">Catsear azuki bean</a>-->
+                        <!--<a href="#">Dandelion bunya</a>-->
+			<a href="http://www.organicauthority.com/images/stories/misc/rutabaga-ccflcr--QueenaSookKim.jpg">Rutabaga</a> 
+                        <a href="https://www.instagram.com/sr471/"><img class=" center ig" src="pictures/ig-logo.png" alt="insta"/></a> 
+                        
+                 </nav>
+		
+            </header>
+		
             
+            <main>       
+                <div class="container">           
+                    <div class="row">              
+                        <h1 class="center down"> My Blog</h1>
+                    </div>           
+                    <div class="row">              
+                        <div class="col s12 main-container center">
+                                   
+                        </div>            
+                    </div>      
+                </div>    
+    
+            </main>
             
-        </header>
-    <main>
-        <div class="container">
-            <div class="row">
-                <h1 class="center"> My Blog</h1>
-            </div>
-            <div class="row">
-                <div class="col s12 main-container center">
-                    
-                </div>
-            </div>
-        </div>    
-    </main>
-        <footer class="purple">
-            <div class="container">
-                <p ><a href="#">Back to top</a></p>
-            </div>   
-            <div class="footer-copyright center">
-                <div class="container">
-                    @2016 Robinson
-                </div>
-            </div>
-        </footer>
-      <!--Import jQuery before materialize.js-->
+            <footer class="purple">            
+                <div class="container">              
+                    <p><a href="#">Back to top</a></p>            
+                </div>               
+                <div class="footer-copyright center">               
+                    <div class="container">
+                    @2016 Robinson              
+                    </div>           
+                </div>      
+            </footer>
+		
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
       <script type="text/javascript" src="libs/backendless.js" ></script>
       <script type="text/javascript" src="js/blog.js" ></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js" ></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js" ></script>
       <script type="text/javascript" src="js/handlebars-v4.0.5.js" ></script>
       
-       <script id="blogs-template" type="text/x-handlebars-template">
+      <script id="blogs-template" type="text/x-handlebars-template">
       {{#each posts}}
         <div class="blog-post">
               <h2 class="blog-post-title">{{title}}</h2>
               <p class="blog-post-meta">At {{format created}} by {{authorEmail}}</p>
-              <div>{{content}}</div>
+              <div>{{{content}}}</div>
         {{/each}}       
       </script> 
-   
-    </body>
-  </html>
+		
+      <script src="js/classie.js"></script>
+		<script>
+			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+				body = document.body;
+
+			showLeft.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeft' );
+			};
+			
+			function disableOther( button ) {
+				if( button !== 'showLeft' ) {
+					classie.toggle( showLeft, 'disabled' );
+				}
+			}
+		</script>
+
+        </body>
+</html>

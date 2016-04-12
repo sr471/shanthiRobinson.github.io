@@ -2,6 +2,7 @@ body{
     display: flex;
     min-height: 100vh;
     flex-direction:column;
+    color:black;
 }
 
 main{
@@ -37,7 +38,22 @@ main{
 }
 
 .butt{
-    
+    color:purple;
     
 }
+
+.content{
+    padding-top: 57px;
+    padding-left: 10px;
     
+}
+
+.down{
+    padding-top: 150px;
+}
+    
+.ig{
+    height: 75px;
+    text-align: center;
+    
+}
