@@ -31,4 +31,6 @@ function Posts(args){
     this.authorEmail = args.authorEmail || "";
 }
  
- $(".button-collapse").sideNav();
+ $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+  });
